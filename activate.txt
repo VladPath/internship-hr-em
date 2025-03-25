@@ -1,0 +1,9 @@
+
+In main dir input this in Terminal!
+
+
+source venv/bin/activate
+cd cafe
+python3 manage.py runserver
+
+Open this app on your local host http://127.0.0.1:8000/

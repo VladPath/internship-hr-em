@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="position-relative overflow-hidden p-3  text-center bg-primary bg-opacity-50 ">
+    <div class="col-md-5 p-lg-5 mx-center  d-flex ">
+      <h1 class="display-4  font-italic ">КАТАЛОГ РОССИЙСКИХ МОДЕЛЕЙ БАС</h1>
+      <img class='img-fluid'  src="{% static 'BAS/imagesss/drone_bg.png' %}" alt="">
+    </div>
+  </div>
+
+  <div class="row m-3">
+    {% for elem in post %}
+    <div class="col-sm-6">
+        <div class="card mb-4" >
+          <a href="{{ elem.get_absolute_url }}" class="btn btn-outline   ">
+          <div class="card-body">
+            <img class=" img-fluid" src="{% static elem.image %}" alt="">
+            <h5 class="card-title text-center">{{elem.title}}</h5>
+          </div>
+        </a>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock content %}
