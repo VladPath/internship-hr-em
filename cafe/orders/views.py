@@ -9,3 +9,6 @@ from .models import ItemDish, Orders
 def index(request):
     return HttpResponse('Заказы тут!')
 
+
+def add(request):
+    return render(request, 'orders/add_order.html', data)
